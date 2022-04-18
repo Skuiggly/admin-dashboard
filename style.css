@@ -1,0 +1,71 @@
+:root {
+    --dark-color: midnightblue;
+    --light-color: ghostwhite;
+}
+
+body {
+    /*
+    display: flex;
+    flex-direction: column;
+    */
+    margin: 0;
+    background-color: var(--dark-color);
+}
+
+/* navigation sidebar */
+.nav {
+    position: absolute;
+    bottom: 0;
+    background-color: aquamarine;
+}
+.sidebar {}
+
+/* main content */
+/*
+.container {
+    display: grid;
+    background-color: black;
+}
+.item {
+    background-color: var(--light-color);
+    text-align: center;
+}
+*/
+
+main {}
+
+/* projects */
+.projects-container {
+
+}
+
+/* announcements */
+.announcements-container {
+    display: none;
+}
+
+/* trending */
+.trending-container {
+    display: none;
+}
+
+/* css when not a small phone*/
+@media only screen and (min-width: 500px) {
+    /*
+    sidebar on left side with items flowing downwards
+    text can shrink to nothing but icons stay
+    */
+}
+/* styling when small ipad*/
+@media only screen and (min-width: 1000px) {
+    /*
+    announcements and trends now shows
+    messages would now show
+    */
+}
+/* styling when on pc */
+@media only screen and (min-width: 1280px) {
+    /*
+    sidebar text now shows
+    */
+}
