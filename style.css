@@ -19,15 +19,19 @@ body {
 
 /* navigation sidebar */
 .sidebar {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     background-color: var(--primary-color);
     height: 10rem;
     width: 100%;
 }
+.logo {
+    display: none;
+}
 nav {
     display: flex;
     height: 100%;
+    flex-wrap: wrap;
 }
 nav a {
     display: flex;
@@ -80,7 +84,33 @@ main {}
 
 /* css when not a small phone*/
 @media only screen and (min-width: 500px) {
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        left: 0;
+        height: 100%;
+        width: 70px;
+    }
+    nav {
+        height: auto;
+    }
+    svg {
+        width: 50px;
+    }
+    .logo {
+        display: block;
+    }
 
+    .tasks {
+        display: flex;
+    }
+    .communities {
+        display: flex;
+    }
+    
+    .settings {
+        display: block;
+    }
     /*
     sidebar on left side with items flowing downwards
     text can shrink to nothing but icons stay
