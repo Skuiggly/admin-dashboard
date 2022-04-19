@@ -1,6 +1,11 @@
 :root {
-    --dark-color: midnightblue;
-    --light-color: ghostwhite;
+    --primary-color: aqua;
+    --secondary-color: ghostwhite;
+    --gray-color: gray;
+    --white-color: ghostwhite;
+}
+:root.dark {
+    --primary-color: midnightblue;
 }
 
 body {
@@ -9,16 +14,40 @@ body {
     flex-direction: column;
     */
     margin: 0;
-    background-color: var(--dark-color);
+    background-color: var(--secondary-color);
 }
 
 /* navigation sidebar */
-.nav {
+.sidebar {
     position: absolute;
     bottom: 0;
-    background-color: aquamarine;
+    background-color: var(--primary-color);
+    height: 10rem;
+    width: 100%;
 }
-.sidebar {}
+nav {
+    display: flex;
+    height: 100%;
+}
+nav a {
+    display: flex;
+    flex: 1;
+}
+svg {
+    margin: auto;
+    color: var(--white-color);
+    max-width: 100px;
+}
+
+.tasks {
+    display: none;
+}
+.communities {
+    display: none;
+}
+.settings {
+    display: none;
+}
 
 /* main content */
 /*
@@ -51,6 +80,7 @@ main {}
 
 /* css when not a small phone*/
 @media only screen and (min-width: 500px) {
+
     /*
     sidebar on left side with items flowing downwards
     text can shrink to nothing but icons stay
